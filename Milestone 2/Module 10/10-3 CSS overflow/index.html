@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS OVERFLOW</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            overflow: scroll;
+            overflow-x: hidden;
+            text-align: justify;
+        }
+        .box h3, p {
+            margin: 10px;
+        }
+        #box1 {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        .ellipsis {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            border: 1px black solid;
+            /* text-overflow: ellipsis; ... at the text ending */
+            text-overflow: clip; /*  nothing at the text ending */
+
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p title="This is a paragraph" class="ellipsis">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur tempore earum, dolorem eum sapiente quisquam animi doloribus accusamus placeat ullam aliquam id sequi itaque ducimus impedit ab cupiditate nisi est!
+        </p>
+    </header>
+    <div id="box1" class="box">
+        <h3 class="">my text box</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellat magnam illum quas, odio debitis qui rem dicta molestiae reiciendis accusamus provident, commodi tempora quisquam ratione voluptate numquam repudiandae soluta voluptatem nemo corrupti tenetur rerum amet? Cumque quas saepe tempore rerum error, libero quidem. Reiciendis inventore molestiae nemo quis quibusdam!lorem50
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendi aspernatur magnam obcaecati repudiandae aperiam quis facilis porro perferendis veritatis distinctio reprehenderit a minima beatae assumenda doloribus, dolorem totam enim neque ad eius consequatur. Itaque harum nisi error deleniti ex porro doloribus veniam dolorum unde, aliquid, blanditiis fuga adipisci dignissimos!
+        </p>
+    </div>
+    <div id="" class="box">
+        <h3 class="">my text box</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellat magnam illum quas, odio debitis qui rem dicta molestiae reiciendis accusamus provident, commodi tempora quisquam ratione voluptate numquam repudiandae soluta voluptatem nemo corrupti tenetur rerum amet? Cumque quas saepe tempore rerum error, libero quidem. Reiciendis inventore molestiae nemo quis quibusdam!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium amet repellat sapiente vel illo. Soluta illum atque tenetur amet quasi dolorum quas, quidem eum optio eligendi consectetur dolores provident ut, et id, totam possimus consequuntur assumenda quam distinctio iusto? Odio at non eligendi molestiae enim exercitationem ab, qui veniam beatae!
+        </p>
+    </div>
+</body>
+</html>

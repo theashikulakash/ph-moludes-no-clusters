@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Responsiveness</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+            gap: 10px;
+        }
+        .food {
+            width: 150px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .food img {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 776px) {
+            .container {
+                display: grid;
+            grid-template-columns: 150px 150px;
+            gap: 10px;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .container {
+                display: grid;
+            grid-template-columns: 150px;
+            gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.food*12>img[src"images/food.jpeg"]+h3{food items - $}+p{Price: \$$00}+plorem10 -->
+         <div class="container">
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 1</h3>
+                <p>Price: $100</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 2</h3>
+                <p>Price: $200</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 3</h3>
+                <p>Price: $300</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 4</h3>
+                <p>Price: $400</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 5</h3>
+                <p>Price: $500</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 6</h3>
+                <p>Price: $600</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 7</h3>
+                <p>Price: $700</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 8</h3>
+                <p>Price: $800</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 9</h3>
+                <p>Price: $900</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 10</h3>
+                <p>Price: $1000</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 11</h3>
+                <p>Price: $1100</p>
+                <plorem10></plorem10>
+            </div>
+            <div class="food">
+                <img src="images/food.jpg" alt="">
+                <h3>food items - 12</h3>
+                <p>Price: $1200</p>
+                <plorem10></plorem10>
+            </div>
+         </div>
+
+</body>
+</html>

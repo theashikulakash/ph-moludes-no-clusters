@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <title>JSON Fetch</title>
+
+    <style>
+        #post-container {
+            max-width: 1160px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px  ;
+        }
+        .post-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px gray;
+            height: 100%;
+            gap: 10px;
+        }
+        .post-card p {
+            text-align: justify;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Fetch</h1>
+    <button onclick="loadTodo()">Todo Data</button>
+    <button onclick="loadPost()">Post Data</button>
+
+    <div id="post-container">
+        
+    </div>
+
+    <div id="todo-container">
+        
+    </div>
+
+
+    <script src="jsonfetch.js"></script>
+</body>
+</html>

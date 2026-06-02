@@ -1,0 +1,50 @@
+[
+  {
+    "id": "gadget-101",
+    "name": "Nebula Sound X1",
+    "price": 129,
+    "description": "Next-generation over-ear headphones featuring adaptive noise cancellation and studio-grade acoustics.",
+    "features": [
+      "40-hour Battery Life",
+      "Active Noise Cancellation (ANC)",
+      "High-Res Audio Certified",
+      "Multi-point Bluetooth Pairing"
+    ]
+  },
+  {
+    "id": "gadget-102",
+    "name": "Titan Smartwatch Pro",
+    "price": 249,
+    "description": "A rugged, water-resistant smartwatch designed for elite athletes and outdoor adventurers.",
+    "features": [
+      "Dual-Band GPS Tracking",
+      "1.4-inch Sapphire Glass",
+      "Blood Oxygen Monitoring",
+      "Military-Grade Durability (MIL-STD-810H)"
+    ]
+  },
+  {
+    "id": "gadget-103",
+    "name": "Lumina Mechanical Keyboard",
+    "price": 89,
+    "description": "Ultra-responsive mechanical keyboard with hot-swappable switches and customizable RGB lighting.",
+    "features": [
+      "Gateron Brown Switches",
+      "PBT Double-shot Keycaps",
+      "USB-C Detachable Cable",
+      "Programmable Macro Keys"
+    ]
+  },
+  {
+    "id": "gadget-104",
+    "name": "Swift Charge 20K",
+    "price": 59,
+    "description": "High-capacity portable power bank capable of charging a laptop and smartphone simultaneously.",
+    "features": [
+      "20,000mAh Capacity",
+      "65W Power Delivery (PD)",
+      "Digital Battery Display",
+      "Triple Output Ports (2x USB-C, 1x USB-A)"
+    ]
+  }
+]

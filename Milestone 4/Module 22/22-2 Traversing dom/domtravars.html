@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contacts</li>
+    </ul>
+    </main>
+    <section>
+        <h1 id="food-title">
+            Okay boss  
+        </h1>
+        <ul>
+            <li>Life</li>
+            <li id="list1">Foods</li>
+            <li>Shelter</li>
+            <li>Health</li>
+            <li>Education</li>
+        </ul>
+    </section>
+    <script>
+        const student = {
+            name: 'abul mia',
+            id: 12,
+            study: function (subject){
+                console.log('studying subject')
+            }
+        }
+
+        const foodTitleH1 = document.getElementById('food-title');
+        console.log(foodTitleH1.innertext)
+
+        const allLi = document.getElementById('list1');
+
+        // Document.getElementsByTagNames('li')
+    </script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-base-200 min-h-screen p-4 md:p-8">
+
+    <!-- <div class="max-w-6xl mx-auto"> -->
+    <header class="dash md:sticky top-0 md:z-50 bg-base-200/80 backdrop-blur-md max-w-6xl mx-auto py-1">
+        <h1 class="text-3xl font-bold text-[#003060] mt-4 mb-2">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div
+                class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:border-blue-600 hover:border-2 hover:scale-105">
+                <p class="text-slate-500 font-medium mb-2">Total</p>
+                <h2 id="current-count" class="current-count text-4xl font-bold text-blue-600">8</h2>
+            </div>
+            <div
+                class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:border-emerald-500 hover:border-2 hover:scale-105">
+                <p class="text-slate-500 font-medium mb-2">Interview</p>
+                <h2 id="interview-count" class="inter-count text-4xl font-bold text-emerald-500">0</h2>
+            </div>
+            <div
+                class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:border-rose-500 hover:border-2 hover:scale-105">
+                <p class="text-slate-500 font-medium mb-2">Rejected</p>
+                <h2 id="rejected-count" class="text-4xl font-bold text-rose-500">0</h2>
+            </div>
+        </div>
+    </header>
+    <section class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-6 gap-4">
+            <h2 class="text-2xl font-bold text-[#003060]">Available Jobs</h2>
+            <span id="total-count" class="text-slate-500 font-medium">8 jobs</span>
+        </div>
+
+        <div class="flex gap-2 mb-8 overflow-x-auto pb-2">
+            <button class="stat-tog btn btn-sm bg-blue-600 hover:bg-emerald-400 hover:border-blue-600 text-black px-6"
+                data-filter="All">All</button>
+            <button
+                class="stat-tog btn btn-sm bg-white hover:border-blue-600 hover:bg-emerald-400 text-black border-slate-200 px-6"
+                data-filter="INTERVIEW">Interview</button>
+            <button class="stat-tog btn btn-sm bg-white hover:border-blue-600 hover:bg-emerald-400 text-black
+                border-slate-200 px-6" data-filter="REJECTED">Rejected</button>
+        </div>
+
+        <div id="job-container" class=" card space-y-4">
+            <!-- Empty State Placeholder -->
+            <div id="empty-state"
+                class="hidden flex flex-col items-center justify-center py-28 p-12 bg-white rounded-2xl border border-slate-100 shadow-sm text-center">
+                <i class="fa-regular fa-file-lines text-6xl text-slate-300 mb-6 font-bold"></i>
+                <h2 class="text-2xl font-bold text-[#003060] mb-2">No jobs available</h2>
+                <p class="text-slate-500 max-w-xs mx-auto">Check back soon for new job opportunities.</p>
+            </div>
+
+            <!-- card start  -->
+
+            <div id="jobs-num" class="job-card relative bg-white p-6 md:p-8 rounded-2xl border
+                 border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">Staff Software Engineer, AI</h3>
+                    <p class="text-slate-500 font-medium mb-4">Google</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Engineer, AI Mountain View, CA</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$130,000 - $175,000</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Lead large-scale machine learning infrastructure projects for Gemini and Search.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num"
+                class="job-card relative bg-white p-6 md:p-8 rounded-2xl border  border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">UX Designer, Workspace</h3>
+                    <p class="text-slate-500 font-medium mb-4">Google</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Remote</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$210k - $305k</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Define the visual language and user flows for next-gen collaboration tools in Google Docs.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num"
+                class="job-card relative bg-white p-6 md:p-8 rounded-2xl border  border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">Azure Backend Developer</h3>
+                    <p class="text-slate-500 font-medium mb-4">Microsoft</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Redmond, WA</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$100,000 - $115,000</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Drive the product roadmap for Quest VR headsets and the social metaverse experience.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num"
+                class="job-card relative bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">Cloud Solutions Architect</h3>
+                    <p class="text-slate-500 font-medium mb-4">Google</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>New York, NY</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$170,000 - $195,000</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Help enterprise customers migrate legacy workloads to Google Cloud Platform (GCP).
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num" class="job-card relative bg-white p-6 md:p-8 rounded-2xl border
+                 border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">Frontend Engineer, Instagram</h3>
+                    <p class="text-slate-500 font-medium mb-4">Meta</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Menlo Park, CA</span>
+                        <span>•</span>
+                        <span>Part-time</span>
+                        <span>•</span>
+                        <span>$80,000 - $105,000</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Optimize web performance and feature delivery for billions of Instagram users globally.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num" class="job-card relative bg-white p-6 md:p-8 rounded-2xl border
+                 border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">Product Manager, Reality Labs</h3>
+                    <p class="text-slate-500 font-medium mb-4">Amazon</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Washington, D.C.</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$160,000 - $235,000</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Drive the product roadmap for Quest VR headsets and the social metaverse experience.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num" class="job-card relative bg-white p-6 md:p-8 rounded-2xl border
+                 border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">Cybersecurity Analyst</h3>
+                    <p class="text-slate-500 font-medium mb-4">Tesla</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Remote</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$230,000 - $275,000</span>
+                    </div>
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Monitor threat intelligence and defend enterprise-level Cloud infrastructure from attacks.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num" class="job-card relative bg-white p-6 md:p-8 rounded-2xl border
+                 border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">Frontend Engineer, Youtube</h3>
+                    <p class="text-slate-500 font-medium mb-4">Google</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Remote</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$130,000 - $175,000</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Optimize web performance and feature delivery for billions of Youtube users globally.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobs-num" class="job-card relative bg-white p-6 md:p-8 rounded-2xl border
+                 border-slate-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-600 hover:border-2">
+                <button id="del-btn"
+                    class="delete-btn absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500 transition-colors border border-slate-100">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+                <div class="max-w-3xl">
+                    <h3 class="text-xl font-bold text-[#003060]">AI Research Scientist</h3>
+                    <p class="text-slate-500 font-medium mb-4">Deep Seek</p>
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-slate-400 text-sm mb-6">
+                        <span>Remote</span>
+                        <span>•</span>
+                        <span>Part-time</span>
+                        <span>•</span>
+                        <span>$60,000 - $75,000</span>
+                    </div>
+
+                    <button id="not-applied"
+                        class="not-applied  badge bg-blue-50 text-blue-700 border-blue-700 rounded-md px-3 py-3 font-semibold text-xs mb-6 uppercase tracking-wider">Not
+                        Applied</button>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Focus on Natural Language Processing (NLP) to enhance Copilot’s reasoning capabilities.
+                    </p>
+
+                    <div class="flex gap-3">
+                        <button id="inter-btn"
+                            class="inter-btn btn btn-outline btn-sm border-emerald-500 text-emerald-500 px-6 hover:bg-emerald-500 hover:border-emerald-500">INTERVIEW</button>
+                        <button id="reject-btn"
+                            class="reject-btn btn btn-outline btn-sm border-rose-400 text-rose-400 px-6 hover:bg-rose-500 hover:border-rose-500">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- </div> -->
+
+
+    <script src="./scripts/script.js"></script>
+
+</body>
+
+</html>

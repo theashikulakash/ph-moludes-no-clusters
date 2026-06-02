@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM DOMA DOM EVENTS</h1>
+    <button onclick="console.log('js code')">Click</button>
+    <button onclick="makeYellow()">Click</button>
+    <button onclick="makeRed()">Click</button>
+
+    <br>
+<!-- enevet listener -->
+    <button id="btn-make-green">Event Listener</button>
+    <script>
+        //get element by id
+        //document.getElementById(btn-make-green).addEventListener('event type', handler)
+
+        document.getElementById('btn-make-green').addEventListener('click', function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        })
+
+
+        function makeYellow(){
+            document.body.style.backgroundColor = 'yellow';
+        }
+        function makeRed(){
+            document.body.style.backgroundColor = 'red';
+        }
+
+    </script>
+</body>
+</html>

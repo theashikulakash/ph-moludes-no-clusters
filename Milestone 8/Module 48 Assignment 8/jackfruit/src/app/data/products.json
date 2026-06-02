@@ -1,0 +1,135 @@
+
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 5.0,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://kahon.com.bd/wp-content/uploads/2024/07/v1-WhatsApp-Image-2024-07-03-11-e1720165494776.webp",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Minimalist Sunscreen SPF 50",
+    "brand": "GlowGuard",
+    "price": 18,
+    "rating": 4.4,
+    "stock": 45,
+    "description": "Water-resistant, non-greasy formula for ultimate skin protection.",
+    "image": "https://euadmin.eurasiasupplies.com//storage/images//product/normal-lBuQr1mZw9oeuWLU6A6McIUDvXp2pe.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 3,
+    "name": "Insulated Stainless Steel Water Bottle",
+    "brand": "HydroPeak",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 30,
+    "description": "Keeps drinks ice-cold for up to 24 hours even in direct sun.",
+    "image": "https://www.bambaw.com/cdn/shop/files/bambaw-stainless-steel-insulated-water-bottle-lead-free.jpg?v=1760343277",
+    "category": "Outdoor"
+  },
+  {
+    "id": 4,
+    "name": "Portable Handheld Mini Fan",
+    "brand": "BreezeGo",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "Rechargeable USB fan with three speeds for instant cooling.",
+    "image": "https://www.startech.com.bd/image/cache/catalog/appliance/charger-fan/fantech/pac6/pac6-blue-01-500x500.webp",
+    "category": "Electronics"
+  },
+  {
+    "id": 5,
+    "name": "Quick-Dry Microfiber Beach Towel",
+    "brand": "SandFree",
+    "price": 20,
+    "rating": 4.9,
+    "stock": 50,
+    "description": "Ultra-absorbent, compact, and sand-repellent beach essential.",
+    "image": "https://image.made-in-china.com/202f0j00MCvkyZshiqzF/Premium-Quick-Dry-Microfiber-Beach-Towels-Bulk-Wholesale-Lightweight-Sand-Resistant.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Foldable Wide-Brim Straw Hat",
+    "brand": "SolStyle",
+    "price": 22,
+    "rating": 4.4,
+    "stock": 15,
+    "description": "Elegant straw hat providing ample shade for face and neck.",
+    "image": "https://thescarfgiraffe.com/cdn/shop/products/733-924.jpg?v=1678897445&width=600",
+    "category": "Apparel"
+  },
+  {
+    "id": 7,
+    "name": "Waterproof Phone Pouch",
+    "brand": "AquaSeal",
+    "price": 10,
+    "rating": 4.7,
+    "stock": 100,
+    "description": "Universal dry bag for smartphones, perfect for pool or beach.",
+    "image": "https://img.drz.lazcdn.com/static/bd/p/bfe2a5c969567a4b9aa3915adbfed6fc.jpg_720x720q80.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 8,
+    "name": "Soft-Sided Leakproof Cooler Bag",
+    "brand": "ChillChest",
+    "price": 35,
+    "rating": 4.8,
+    "stock": 12,
+    "description": "Lightweight insulated bag that holds up to 12 cans with ice.",
+    "image": "https://www.waterbottle.tech/wp-content/uploads/2026/03/15.9QT21.1QT-Customized-TPU-Waterproof-Ice-Cooler-Bag-Backpack-Thermal-Insulation-Large-Capacity-CBG015A802-1-500x500.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "id": 9,
+    "name": "Aloe Vera After-Sun Gel",
+    "brand": "Soothie",
+    "price": 9,
+    "rating": 4.7,
+    "stock": 60,
+    "description": "Pure aloe vera gel to cool and hydrate skin after sun exposure.",
+    "image": "https://pics.walgreens.com/prodimg/623175/2_450.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 10,
+    "name": "Comfortable Flip-Flops",
+    "brand": "CloudWalk",
+    "price": 14,
+    "rating": 4.3,
+    "stock": 40,
+    "description": "Ergonomic rubber sandals designed for all-day beach comfort.",
+    "image": "https://www.footankle.com/wp-content/uploads/2014/04/healthy-comfortable-flip-flops-sandals-wave.jpg",
+    "category": "Apparel"
+  },
+  {
+    "id": 11,
+    "name": "Portable Beach Umbrella",
+    "brand": "SunBlocker",
+    "price": 45,
+    "rating": 4.6,
+    "stock": 8,
+    "description": "Wind-resistant umbrella with a sand anchor and tilt mechanism.",
+    "image": "https://images.thdstatic.com/productImages/dfc4d35e-8a73-4f3c-a842-28c419c7f16a/svn/clihome-beach-umbrellas-cl-bl70716-e1_600.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "id": 12,
+    "name": "Inflatable Pool Float",
+    "brand": "FloatieJoy",
+    "price": 28,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "Durable vinyl pool lounger with built-in cup holders.",
+    "image": "https://wowsports.com/cdn/shop/files/25-WPF-6906_2.jpg?v=1741893222&width=533",
+    "category": "Outdoor"
+  }
+]

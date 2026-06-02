@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3 Transform Translate</title>
+    <style>
+        .container, .inner {
+            width: 200px;
+            height: 200px;
+        }
+        .container {
+            border: 2px solid yellowgreen;
+        }
+        .inner {
+            border: 2px solid red;
+            transform: scale(0.5, 0.75); /* scale(y, x) */
+        }
+        .inner:hover {
+            
+            transform: rotate(45deg);
+            transform: scale(0.75, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">inner 1</div>
+    </div>
+    <div class="container">
+        <div class="inner">inner 2</div>
+    </div>
+    <div class="container">
+        <div class="inner">inner 3</div>
+    </div>
+</body>
+</html>

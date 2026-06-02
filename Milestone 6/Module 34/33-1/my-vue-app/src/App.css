@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+* {
+  font-family: "Playwrite IE", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}

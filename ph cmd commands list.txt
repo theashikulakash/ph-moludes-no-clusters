@@ -1,0 +1,72 @@
+
+npm create vite@latest my-vue-app -- --template react
+
+
+cd my app folder
+
+code .
+
+
+npm install tailwindcss @tailwindcss/vite
+
+import { defineConfig } from 'vite'
+
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+  
+    tailwindcss(),
+	
+  ],
+})
+
+
+npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+
+
+src/style.css
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+nextjs
+
+
+npx create-next-app@latest nextjs-data-fetch
+
+typescript :no
+Eslint
+react compiler :yes
+TailwindCSS :Yes
+src directory : Yes
+App Router :Yes
+import alias :no
+agents md :yes
+
+
+@plugin "daisyui";
+@import "daisyui/daisyui.css";
+
+
+
+heroui
+
+npm i @heroui/styles @heroui/react
+
+in global.css
+
+@import "@heroui/styles"; 
+
+
+
+
+gravity-ui install
+
+npm install --save-dev @gravity-ui/icons
+
+
+
+https://better-auth.com/ for login authintication
+
+npm install better-auth

@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container div{
+    border: 2px solid red;
+    height: 40px;
+    width: 60px;
+    font-size: 1.5em;
+}
+
+.container2{
+    display: flex;
+    justify-content: space-around;
+}
+.user{
+    border: 2px solid blue;
+    height: 60px;
+    width: 80px;
+    color: green;
+}
+
+.container3{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

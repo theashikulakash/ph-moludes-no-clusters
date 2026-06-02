@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Design homepage UI",
+    "description": "Create wireframe and final UI design for homepage",
+    "status": "pending",
+    "priority": "high",
+    "dueDate": "2026-04-15",
+    "assignedTo": "John Doe",
+    "tags": ["design", "frontend"],
+    "createdAt": "2026-04-10"
+  },
+  {
+    "id": 2,
+    "title": "Build authentication API",
+    "description": "Implement login and registration endpoints",
+    "status": "in-progress",
+    "priority": "high",
+    "dueDate": "2026-04-18",
+    "assignedTo": "Jane Smith",
+    "tags": ["backend", "api"],
+    "createdAt": "2026-04-09"
+  },
+  {
+    "id": 3,
+    "title": "Setup database schema",
+    "description": "Design MongoDB schema for users and tasks",
+    "status": "completed",
+    "priority": "medium",
+    "dueDate": "2026-04-12",
+    "assignedTo": "Mike Johnson",
+    "tags": ["database"],
+    "createdAt": "2026-04-08"
+  },
+  {
+    "id": 4,
+    "title": "Implement task dashboard",
+    "description": "Create dashboard UI to display all tasks",
+    "status": "pending",
+    "priority": "medium",
+    "dueDate": "2026-04-20",
+    "assignedTo": "Sarah Lee",
+    "tags": ["frontend", "dashboard"],
+    "createdAt": "2026-04-11"
+  },
+  {
+    "id": 5,
+    "title": "Add task filtering",
+    "description": "Enable filtering by status, priority, and tags",
+    "status": "pending",
+    "priority": "low",
+    "dueDate": "2026-04-22",
+    "assignedTo": "David Kim",
+    "tags": ["feature"],
+    "createdAt": "2026-04-11"
+  }
+]

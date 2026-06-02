@@ -1,0 +1,111 @@
+:root {
+            --pri-color: forestgreen;
+            --text-colorw: #ffffff;
+            --text-colorb: #000000;
+
+}
+[data-theme="alt"] {
+  --pri-color: tomato;
+  --text-colorw: #ecf0f1;
+  --text-colorb: #2c3e50;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 10px;
+    /* border: 2px solid var(--pri-color); */
+}
+header button{
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: var(--pri-color);
+    color: var(--text-colorw);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+header button:hover{
+    background-color: var(--pri-color);
+    color: var(--text-colorw);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+nav ul a{
+    text-decoration: none;
+    color: var(--pri-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+nav ul a:hover{
+    text-decoration: none;
+    color: var(--text-colorw);
+    background-color: var(--pri-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.card {
+  width: 300px;
+  height: 470px;
+  border: 2px solid var(--pri-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+.card:hover {
+  background-color: rgba(30, 202, 0, 0.082);
+  border: 5px var(--pri-color) solid;
+}
+.card button {
+  width: 100%;
+  height: 40px;
+  background-color: var(--pri-color);
+  color: var(--text-colorw);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: var(--text-colorw);
+  color: var(--pri-color);
+  border: 2px var(--pri-color) solid;
+}
+.card img {
+  width: 100%;  
+  height: 250px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.card h2 {
+  text-align: center;
+  color: var(--pri-color);
+}
+.card p {
+  text-align: justify;
+  color: var(--text-colorb);
+}
+.cards-p {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 10px;
+    /* border: 2px solid var(--pri-color); */
+}

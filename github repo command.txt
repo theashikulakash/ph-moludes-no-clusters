@@ -1,0 +1,12 @@
+git init
+
+git add . [ add এর পর স্পেস দিয়ে dot দিতে ভুলিও না ]
+
+git commit -m " Meaningful Message "
+
+git branch -M main
+
+git remote add origin https://github.com/example/example.git
+
+git push origin main
+

@@ -1,0 +1,14 @@
+nav li{
+    list-style: none;
+    display: inline;
+    margin-right: 15px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: orchid;
+}
+nav li a:hover{
+    font-weight: bold;
+    color: chartreuse;
+}

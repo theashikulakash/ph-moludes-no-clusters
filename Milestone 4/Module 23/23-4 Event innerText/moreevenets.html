@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn-mouse">Micky Mouse</button>
+    <input id="user-name" placeholder="Your Name" type="text">
+    <input id="mail" placeholder="Your Name" type="text">
+
+    <script>
+        document.getElementById('btn-mouse').addEventListener('click', function(){
+            console.log('typing')
+        })
+
+        // document.getElementById('user-name').addEventListener('keydown', function(event){
+        //     console.log('typing', event.target.value)
+        // })
+        document.getElementById('user-name').addEventListener('keyup', function(event){
+            console.log('typing', event.target.value)
+        })
+        // document.getElementById('user-name').addEventListener('focus', function(){
+        //     console.log('Enter Your Name')
+        // })
+
+        // document.getElementById('mail').addEventListener('blur', function(){
+        //     console.log('Enter Your mail')
+        // })
+    </script>
+
+</body>
+</html>
